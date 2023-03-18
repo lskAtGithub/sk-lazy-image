@@ -1,6 +1,6 @@
 
 // Import vue component
-import component from '@/sk-lazy-image.vue';
+import component from '@/vue-sk-lazy-image.vue';
 
 // Default export is installable instance of component.
 // IIFE injects install function into component, allowing component

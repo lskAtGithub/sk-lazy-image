@@ -1,6 +1,6 @@
 <template>
-  <div class="sk-lazy-image-box">
-    <img ref="lazyImage" :src="isShowSrc" v-bind="$attrs">
+  <div class="vue-sk-lazy-image-box">
+    <img class="vue-sk-lazy-image" ref="lazyImage" :src="isShowSrc" v-bind="$attrs">
   </div>
 </template>
 
@@ -22,7 +22,6 @@ export default {
       this.isShowSrc = this.$attrs.src
     }
     const io = new IntersectionObserver((entries) => {
-      console.log(entries[0].intersectionRatio)
       if (entries[0].intersectionRatio <= 0) return
       this.isShowSrc = this.$attrs.src
       io.unobserve(this.$refs.lazyImage)
@@ -33,7 +32,13 @@ export default {
 </script>
 
 <style scoped>
-.sk-lazy-image-box {
+.vue-sk-lazy-image-box {
   display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.vue-sk-lazy-image-box > .vue-sk-lazy-image {
+  width: 100%;
+  height: 100%;
 }
 </style>

@@ -1,11 +1,11 @@
 {
-  "name": "sk-lazy-image",
+  "name": "vue-vue-sk-lazy-image",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/sk-lazy-image.ssr.js",
-  "browser": "dist/sk-lazy-image.esm.js",
-  "module": "dist/sk-lazy-image.esm.js",
-  "unpkg": "dist/sk-lazy-image.min.js",
+  "main": "dist/vue-vue-sk-lazy-image.ssr.js",
+  "browser": "dist/vue-vue-sk-lazy-image.esm.js",
+  "module": "dist/vue-vue-sk-lazy-image.esm.js",
+  "unpkg": "dist/vue-vue-sk-lazy-image.min.js",
   "files": [
     "dist/*",
     "src/**/*.vue"
