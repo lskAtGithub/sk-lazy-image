@@ -1,6 +1,6 @@
 <template>
-  <div class="vue-sk-lazy-image-box">
-    <img class="vue-sk-lazy-image" ref="lazyImage" :src="isShowSrc" v-bind="$attrs">
+  <div class="vue-sk-lazy-image-box" :style="{ 'width': width || '100%', 'height': height || '100%' }">
+    <img class="vue-sk-lazy-image" @error="handleLoadError" ref="lazyImage" :src="isShowSrc" v-bind="$attrs">
   </div>
 </template>
 
@@ -10,6 +10,14 @@ export default {
     lazy: {
       type: Boolean,
       default: () => false
+    },
+    width: {
+      type: String,
+      default: () => ''
+    },
+    height: {
+      type: String,
+      default: () => ''
     }
   },
   data() {
@@ -27,6 +35,11 @@ export default {
       io.unobserve(this.$refs.lazyImage)
     })
     io.observe(this.$refs.lazyImage)
+  },
+  methods: {
+    handleLoadError(e) {
+      console.log(e)
+    }
   }
 }
 </script>
@@ -34,8 +47,9 @@ export default {
 <style scoped>
 .vue-sk-lazy-image-box {
   display: inline-block;
-  width: 100%;
-  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 .vue-sk-lazy-image-box > .vue-sk-lazy-image {
   width: 100%;

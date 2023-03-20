@@ -1,11 +1,11 @@
 {
-  "name": "vue-vue-sk-lazy-image",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/vue-vue-sk-lazy-image.ssr.js",
-  "browser": "dist/vue-vue-sk-lazy-image.esm.js",
-  "module": "dist/vue-vue-sk-lazy-image.esm.js",
-  "unpkg": "dist/vue-vue-sk-lazy-image.min.js",
+  "name": "vue-sk-lazy-image",
+  "version": "1.0.2",
+  "description": "基于Vue的图片组件，支持懒加载",
+  "main": "dist/vue-sk-lazy-image.ssr.js",
+  "browser": "dist/vue-sk-lazy-image.esm.js",
+  "module": "dist/vue-sk-lazy-image.esm.js",
+  "unpkg": "dist/vue-sk-lazy-image.min.js",
   "files": [
     "dist/*",
     "src/**/*.vue"
